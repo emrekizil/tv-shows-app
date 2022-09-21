@@ -23,20 +23,21 @@ const Form = () => {
   return (
     <div className="max-w-3xl mx-auto form text-center bg-f1">
       <form action="" onSubmit={formSubmit} className="">
-        <div className="">
-          <div className="mx-auto inline-block">
-          <input type="text" className="border-black mb-4" value={show} onChange={(e)=>{
+        <div className="flex justify-around">
+          <div className=""></div>
+          <div className="">
+          <input type="text" className="rounded-md w-48 border-black mb-4 mt-3 mr-3" value={show} onChange={(e)=>{
             setShow(e.target.value)
           }}/>
           </div>
-          <div className="mb-4 space-x-10 inline-block">
-          <button className="px-6 py-3" onClick={formSubmit}>Search</button>     
-          <button className="px-6 py-3" onClick={clearShows}>Clear</button>
+          <div className="mb-4 space-x-5">
+          <button className="px-6 py-3 text-f2" onClick={formSubmit}>Search</button>     
+          <button className="px-6 py-3 text-f2" onClick={clearShows}>Clear</button>
           </div>
         </div>
       </form>
       
-      {data.length ? <Results data={data} setData={setData}/>:<h2>{status}</h2> }
+      {data.length ? <Results data={data} setData={setData}/>:<h2 className="text-f2">{status}</h2> }
     </div>
   );
 };
