@@ -4,7 +4,8 @@ import Results from "./Results";
 const Form = () => {
   const [show,setShow]=useState("")
   const [data,setData]=useState([])
-  const [status,setStatus]=useState("Lets search some show")
+  
+  const [status,setStatus]=useState("Let's search show")
   const formSubmit=(e)=>{
     e.preventDefault()
     requestShows(show)
@@ -18,15 +19,13 @@ const Form = () => {
   const clearShows= () => {
     setData([])
     setShow("")
-    setStatus("Lets search some show")
   }
   return (
     <div className="max-w-3xl mx-auto form text-center bg-f1">
       <form action="" onSubmit={formSubmit} className="">
         <div className="grid grid-rows-2 sm:flex sm:justify-center">
-          
           <div className="sm:mr-10">
-          <input type="text" className="rounded-md w-48 border-black mb-4 mt-3" value={show} onChange={(e)=>{
+          <input type="text" placeholder="Show's Name" className="rounded-md w-48 border-black mb-4 mt-3" value={show} onChange={(e)=>{
             setShow(e.target.value)
           }}/>
           </div>

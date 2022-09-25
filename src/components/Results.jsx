@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Results = ({data,setData}) => {
-    
+const Results = ({data}) => {
     return (  
         <div className="shows  grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {data.map((shows)=>(
@@ -12,7 +11,6 @@ const Results = ({data,setData}) => {
                     <div className="min-h-18 h-24">
                     <h2 className="mb-5 text-f2">{shows.show.name}</h2>
                     </div>
-                    
                     <Link to={`/shows/${shows.show.id}`} className="hover:bg-opacity-90 transition rounded-lg px-8 py-4  bg-f3 text-f2">Learn More</Link>
                 </div>
             ))}

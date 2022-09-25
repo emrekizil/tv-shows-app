@@ -5,19 +5,17 @@ import { BrowserRouter, Routes, Route, Link, Router } from "react-router-dom";
 import Form from './components/Form'
 import Details from './components/Details';
 import Navbar from './components/Navbar';
+import NotFound from './components/NotFound';
 function App() {
-
   return (
-   <StrictMode>
     <BrowserRouter>
-    <Navbar/>
+     <Navbar/>
     <Routes>
-     <Route path="/" element={<Form/>} />
      <Route path="/shows/:id" element={<Details/>}/>
+     <Route path="/" element={<Form/>} />
+     <Route path="*" element={<NotFound/>} />
     </Routes>
     </BrowserRouter>
-   </StrictMode>
-
   )
 }
 
