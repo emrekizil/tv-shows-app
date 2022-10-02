@@ -9,3 +9,4 @@ npm install
 npm run dev
 ```
 ## Preview
+![](https://github.com/emrekizil/tv-shows-app/blob/master/image/preview.gif)
